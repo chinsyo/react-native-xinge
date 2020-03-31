@@ -2,19 +2,19 @@
 #import "RNTXingePushModule.h"
 #import <React/RCTUtils.h>
 
-static NSString *XingePushEvent_Start = @"start";
-static NSString *XingePushEvent_Stop = @"stop";
-static NSString *XingePushEvent_Resgiter = @"register";
+static const NSString *const XingePushEvent_Start = @"start";
+static const NSString *const XingePushEvent_Stop = @"stop";
+static const NSString *const XingePushEvent_Resgiter = @"register";
 
-static NSString *XingePushEvent_BindAccount = @"bindAccount";
-static NSString *XingePushEvent_BindTags = @"bindTags";
-static NSString *XingePushEvent_UnbindAccount = @"unbindAccount";
-static NSString *XingePushEvent_UnbindTags = @"unbindTags";
+static const NSString *const XingePushEvent_BindAccount = @"bindAccount";
+static const NSString *const XingePushEvent_BindTags = @"bindTags";
+static const NSString *const XingePushEvent_UnbindAccount = @"unbindAccount";
+static const NSString *const XingePushEvent_UnbindTags = @"unbindTags";
 
-static NSString *XingePushEvent_Message = @"message";
-static NSString *XingePushEvent_Notification = @"notification";
+static const NSString *const XingePushEvent_Message = @"message";
+static const NSString *const XingePushEvent_Notification = @"notification";
 
-static NSString *XingePushEvent_RemoteNotification = @"XingePushEvent_RemoteNotification";
+static const NSString *const XingePushEvent_RemoteNotification = @"XingePushEvent_RemoteNotification";
 
 static NSDictionary *RNTXingePush_LaunchUserInfo = nil;
 
