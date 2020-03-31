@@ -28,6 +28,9 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+  
+  [RNTXingePushModule didFinishLaunchingWithOptions:launchOptions];
+
   return YES;
 }
 
@@ -40,4 +43,7 @@
 #endif
 }
 
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler {
+  [RNTXingePushModule didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
+}
 @end
