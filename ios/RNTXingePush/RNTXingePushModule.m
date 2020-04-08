@@ -64,7 +64,7 @@ static NSMutableDictionary* XingePush_GetNotification(NSDictionary *userInfo) {
 
 };
 
-@interface () <RCTBridgeModule, XGPushDelegate, XGPushTokenManagerDelegate>
+@interface RNTXingePushModule () <RCTBridgeModule, XGPushDelegate, XGPushTokenManagerDelegate>
 
 @end
 
@@ -300,11 +300,6 @@ RCT_EXPORT_METHOD(stop) {
 
 RCT_EXPORT_METHOD(reportNotification:(NSDictionary *)info) {
     [[XGPush defaultManager] reportXGNotificationInfo:info];
-}
-
-RCT_EXPORT_METHOD(reportResponse:(NSDictionary *)resp) {
-    UNNotificationResponse *response = [[UNNotificationResponse alloc] init];
-    [[XGPush defaultManager] reportXGNotificationResponse:response];
 }
 
 RCT_EXPORT_METHOD(setBadge:(NSInteger)badge) {
