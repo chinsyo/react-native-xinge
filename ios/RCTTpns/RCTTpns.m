@@ -1,5 +1,5 @@
 
-#import "RNTXingePushModule.h"
+#import "RCTTpns.h"
 #import <React/RCTUtils.h>
 #import <TPNS-iOS/XGPush.h>
 
@@ -17,7 +17,7 @@ static const NSString *const XingePushEvent_Notification = @"notification";
 
 static const NSString *const XingePushEvent_RemoteNotification = @"XingePushEvent_RemoteNotification";
 
-static NSDictionary *RNTXingePush_LaunchUserInfo = nil;
+static NSDictionary *RCTTpns_LaunchUserInfo = nil;
 
 // 获取自定义键值对
 static NSMutableDictionary* XingePush_GetCustomContent(NSDictionary *userInfo) {
@@ -64,11 +64,11 @@ static NSMutableDictionary* XingePush_GetNotification(NSDictionary *userInfo) {
 
 };
 
-@interface RNTXingePushModule () <RCTBridgeModule, XGPushDelegate, XGPushTokenManagerDelegate>
+@interface RCTTpns () <RCTBridgeModule, XGPushDelegate, XGPushTokenManagerDelegate>
 
 @end
 
-@implementation RNTXingePushModule
+@implementation RCTTpns
 
 // 在主工程 AppDelegate.m 里调下面几个 did 开头的方法
 
@@ -78,10 +78,10 @@ static NSMutableDictionary* XingePush_GetNotification(NSDictionary *userInfo) {
     [[XGPush defaultManager] reportXGNotificationInfo:launchOptions];
     // 点击推送启动 App
     if ([launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey]) {
-        RNTXingePush_LaunchUserInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+        RCTTpns_LaunchUserInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     }
     else {
-        RNTXingePush_LaunchUserInfo = nil;
+        RCTTpns_LaunchUserInfo = nil;
     }
 }
 
@@ -212,7 +212,7 @@ static NSMutableDictionary* XingePush_GetNotification(NSDictionary *userInfo) {
 #endif
 
 
-RCT_EXPORT_MODULE(RNTXingePush);
+RCT_EXPORT_MODULE();
 
 + (BOOL)requiresMainQueueSetup {
     return YES;
@@ -286,11 +286,11 @@ RCT_EXPORT_METHOD(setDebug:(BOOL)enable) {
 RCT_EXPORT_METHOD(start:(NSInteger)appID appKey:(NSString *)appKey) {
     [[XGPush defaultManager] startXGWithAppID:(uint32_t)appID appKey:appKey delegate:self];
     [XGPushTokenManager defaultTokenManager].delegate = self;
-    if (RNTXingePush_LaunchUserInfo != nil) {
-        NSMutableDictionary *dict = XingePush_GetNotification(RNTXingePush_LaunchUserInfo);
+    if (RCTTpns_LaunchUserInfo != nil) {
+        NSMutableDictionary *dict = XingePush_GetNotification(RCTTpns_LaunchUserInfo);
         dict[@"clicked"] = @(YES);
         [self sendEventWithName:XingePushEvent_Notification body:dict];
-        RNTXingePush_LaunchUserInfo = nil;
+        RCTTpns_LaunchUserInfo = nil;
     }
 }
 

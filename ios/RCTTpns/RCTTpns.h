@@ -4,7 +4,7 @@
 
 
 
-@interface RNTXingePushModule : RCTEventEmitter 
+@interface RCTTpns : RCTEventEmitter 
 
 + (void)didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 

@@ -1,9 +1,9 @@
 
 import { NativeEventEmitter, NativeModules } from 'react-native'
 
-const { RNTXingePush } = NativeModules
+const { RCTTpns } = NativeModules
 
-const eventEmitter = new NativeEventEmitter(RNTXingePush)
+const eventEmitter = new NativeEventEmitter(RCTTpns)
 
 export default {
 
@@ -13,7 +13,7 @@ export default {
    * @param {boolean} enable
    */
   setDebug(enable) {
-    RNTXingePush.setDebug(enable)
+    RCTTpns.setDebug(enable)
   },
 
   /**
@@ -77,14 +77,14 @@ export default {
     if (typeof accessKey !== 'string') {
       console.error(`[XingePush start] accessKey is not a string.`)
     }
-    RNTXingePush.start(accessId, accessKey)
+    RCTTpns.start(accessId, accessKey)
   },
 
   /**
    * 停止信鸽推送服务
    */
   stop() {
-    RNTXingePush.stop()
+    RCTTpns.stop()
   },
 
   /**
@@ -96,7 +96,7 @@ export default {
     if (typeof account !== 'string') {
       console.error(`[XingePush bindAccount] account is not a string.`)
     }
-    RNTXingePush.bindAccount(account)
+    RCTTpns.bindAccount(account)
   },
 
   /**
@@ -108,7 +108,7 @@ export default {
     if (typeof account !== 'string') {
       console.error(`[XingePush unbindAccount] account is not a string.`)
     }
-    RNTXingePush.unbindAccount(account)
+    RCTTpns.unbindAccount(account)
   },
 
   /**
@@ -117,7 +117,7 @@ export default {
    * @param {Array<string>} tags
    */
   bindTags(tags) {
-    RNTXingePush.bindTags(tags)
+    RCTTpns.bindTags(tags)
   },
 
   /**
@@ -126,7 +126,7 @@ export default {
    * @param {Array<string>} tags
    */
   unbindTags(tags) {
-    RNTXingePush.unbindTags(tags)
+    RCTTpns.unbindTags(tags)
   },
 
   /**
@@ -135,7 +135,7 @@ export default {
    * @return {Promise} 返回 { badge: 0 }
    */
   getBadge() {
-    return RNTXingePush.getBadge()
+    return RCTTpns.getBadge()
   },
 
   /**
@@ -147,7 +147,7 @@ export default {
     if (typeof badge !== 'number') {
       console.error(`[XingePush setBadge] badge is not a number.`)
     }
-    RNTXingePush.setBadge(badge)
+    RCTTpns.setBadge(badge)
   },
 
   addEventListener(name, listener) {

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D8CCA132232B46A00473496 /* RNTXingePushModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8CCA122232B46A00473496 /* RNTXingePushModule.m */; };
-		9D8CCA142232B46A00473496 /* RNTXingePushModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D8CCA112232B46A00473496 /* RNTXingePushModule.h */; };
+		9D8CCA132232B46A00473496 /* RCTTpns.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8CCA122232B46A00473496 /* RCTTpns.m */; };
+		9D8CCA142232B46A00473496 /* RCTTpns.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D8CCA112232B46A00473496 /* RCTTpns.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,16 +18,16 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				9D8CCA142232B46A00473496 /* RNTXingePushModule.h in CopyFiles */,
+				9D8CCA142232B46A00473496 /* RCTTpns.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9D8CCA0E2232B46A00473496 /* libRNTXingePush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNTXingePush.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D8CCA112232B46A00473496 /* RNTXingePushModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTXingePushModule.h; sourceTree = "<group>"; };
-		9D8CCA122232B46A00473496 /* RNTXingePushModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTXingePushModule.m; sourceTree = "<group>"; };
+		9D8CCA0E2232B46A00473496 /* libRCTTpns.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTTpns.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D8CCA112232B46A00473496 /* RCTTpns.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTTpns.h; sourceTree = "<group>"; };
+		9D8CCA122232B46A00473496 /* RCTTpns.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTTpns.m; sourceTree = "<group>"; };
 		9DCC8C052233A11800B71B82 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		9DCC8C072233A12000B71B82 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9DCC8C092233A12A00B71B82 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
@@ -49,7 +49,7 @@
 		9D8CCA052232B46A00473496 = {
 			isa = PBXGroup;
 			children = (
-				9D8CCA102232B46A00473496 /* RNTXingePush */,
+				9D8CCA102232B46A00473496 /* RCTTpns */,
 				9D8CCA0F2232B46A00473496 /* Products */,
 				9DCC8C042233A11700B71B82 /* Frameworks */,
 			);
@@ -58,18 +58,18 @@
 		9D8CCA0F2232B46A00473496 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9D8CCA0E2232B46A00473496 /* libRNTXingePush.a */,
+				9D8CCA0E2232B46A00473496 /* libRCTTpns.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9D8CCA102232B46A00473496 /* RNTXingePush */ = {
+		9D8CCA102232B46A00473496 /* RCTTpns */ = {
 			isa = PBXGroup;
 			children = (
-				9D8CCA112232B46A00473496 /* RNTXingePushModule.h */,
-				9D8CCA122232B46A00473496 /* RNTXingePushModule.m */,
+				9D8CCA112232B46A00473496 /* RCTTpns.h */,
+				9D8CCA122232B46A00473496 /* RCTTpns.m */,
 			);
-			path = RNTXingePush;
+			path = RCTTpns;
 			sourceTree = "<group>";
 		};
 		9DCC8C042233A11700B71B82 /* Frameworks */ = {
@@ -87,9 +87,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9D8CCA0D2232B46A00473496 /* RNTXingePush */ = {
+		9D8CCA0D2232B46A00473496 /* RCTTpns */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9D8CCA172232B46A00473496 /* Build configuration list for PBXNativeTarget "RNTXingePush" */;
+			buildConfigurationList = 9D8CCA172232B46A00473496 /* Build configuration list for PBXNativeTarget "RCTTpns" */;
 			buildPhases = (
 				9D8CCA0A2232B46A00473496 /* Sources */,
 				9D8CCA0B2232B46A00473496 /* Frameworks */,
@@ -99,9 +99,9 @@
 			);
 			dependencies = (
 			);
-			name = RNTXingePush;
+			name = RCTTpns;
 			productName = RNTXingePush;
-			productReference = 9D8CCA0E2232B46A00473496 /* libRNTXingePush.a */;
+			productReference = 9D8CCA0E2232B46A00473496 /* libRCTTpns.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -118,7 +118,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9D8CCA092232B46A00473496 /* Build configuration list for PBXProject "RNTXingePush" */;
+			buildConfigurationList = 9D8CCA092232B46A00473496 /* Build configuration list for PBXProject "RCTTpns" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -130,7 +130,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9D8CCA0D2232B46A00473496 /* RNTXingePush */,
+				9D8CCA0D2232B46A00473496 /* RCTTpns */,
 			);
 		};
 /* End PBXProject section */
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D8CCA132232B46A00473496 /* RNTXingePushModule.m in Sources */,
+				9D8CCA132232B46A00473496 /* RCTTpns.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +298,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9D8CCA092232B46A00473496 /* Build configuration list for PBXProject "RNTXingePush" */ = {
+		9D8CCA092232B46A00473496 /* Build configuration list for PBXProject "RCTTpns" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9D8CCA152232B46A00473496 /* Debug */,
@@ -307,7 +307,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9D8CCA172232B46A00473496 /* Build configuration list for PBXNativeTarget "RNTXingePush" */ = {
+		9D8CCA172232B46A00473496 /* Build configuration list for PBXNativeTarget "RCTTpns" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9D8CCA182232B46A00473496 /* Debug */,
