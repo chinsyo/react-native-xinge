@@ -1,9 +1,9 @@
 
 import { NativeEventEmitter, NativeModules } from 'react-native'
 
-const { RCTTpns } = NativeModules
+const { Tpns } = NativeModules;
 
-const eventEmitter = new NativeEventEmitter(RCTTpns)
+const eventEmitter = new NativeEventEmitter(Tpns)
 
 export default {
 
@@ -13,7 +13,7 @@ export default {
    * @param {boolean} enable
    */
   setDebug(enable) {
-    RCTTpns.setDebug(enable)
+    Tpns.setDebug(enable)
   },
 
   /**
@@ -77,14 +77,14 @@ export default {
     if (typeof accessKey !== 'string') {
       console.error(`[XingePush start] accessKey is not a string.`)
     }
-    RCTTpns.start(accessId, accessKey)
+    Tpns.start(accessId, accessKey)
   },
 
   /**
    * 停止信鸽推送服务
    */
   stop() {
-    RCTTpns.stop()
+    Tpns.stop()
   },
 
   /**
@@ -96,7 +96,7 @@ export default {
     if (typeof account !== 'string') {
       console.error(`[XingePush bindAccount] account is not a string.`)
     }
-    RCTTpns.bindAccount(account)
+    Tpns.bindAccount(account)
   },
 
   /**
@@ -108,7 +108,7 @@ export default {
     if (typeof account !== 'string') {
       console.error(`[XingePush unbindAccount] account is not a string.`)
     }
-    RCTTpns.unbindAccount(account)
+    Tpns.unbindAccount(account)
   },
 
   /**
@@ -117,7 +117,7 @@ export default {
    * @param {Array<string>} tags
    */
   bindTags(tags) {
-    RCTTpns.bindTags(tags)
+    Tpns.bindTags(tags)
   },
 
   /**
@@ -126,7 +126,7 @@ export default {
    * @param {Array<string>} tags
    */
   unbindTags(tags) {
-    RCTTpns.unbindTags(tags)
+    Tpns.unbindTags(tags)
   },
 
   /**
@@ -135,7 +135,7 @@ export default {
    * @return {Promise} 返回 { badge: 0 }
    */
   getBadge() {
-    return RCTTpns.getBadge()
+    return Tpns.getBadge()
   },
 
   /**
@@ -147,7 +147,7 @@ export default {
     if (typeof badge !== 'number') {
       console.error(`[XingePush setBadge] badge is not a number.`)
     }
-    RCTTpns.setBadge(badge)
+    Tpns.setBadge(badge)
   },
 
   addEventListener(name, listener) {
